@@ -1,0 +1,3 @@
+<launch>
+    <node name="control" pkg="pendulum_control" type="pendulum.py"/>
+</launch>
