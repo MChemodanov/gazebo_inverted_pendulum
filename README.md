@@ -1,9 +1,9 @@
 ## Настройка:
-1. Забрать в <workspace>/src/
+1. Забрать в workspace/src/
 
-2. В <workspace> вызвать catkin_make
+2. В workspace вызвать catkin_make
 
-3. В каждой запускаемой консоли вызывать source <workspace>/devel/setup.bash  
+3. В каждой запускаемой консоли вызывать source workspace/devel/setup.bash  
 
 ## Запуск:
 1. Запуск симуляции: 
