@@ -207,9 +207,8 @@ namespace gazebo
 
     math::Vector3 linear_vel = parent_->GetRelativeLinearVel();
 
-    link_->AddRelativeForce(math::Vector3((x_ - linear_vel.x)* force_x_velocity_p_gain_,
-                                          (y_ - linear_vel.y)* force_y_velocity_p_gain_,
-                                          0.0));
+    link_->AddRelativeForce(math::Vector3(x_, y_, 0.0));
+
     //parent_->PlaceOnNearestEntityBelow();
     //parent_->SetLinearVel(math::Vector3(
     //      x_ * cosf(yaw) - y_ * sinf(yaw),
