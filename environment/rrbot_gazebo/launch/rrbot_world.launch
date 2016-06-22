@@ -19,7 +19,7 @@
 
   <!-- Load the URDF into the ROS Parameter Server -->
   <param name="robot_description"
-	 command="$(find xacro)/xacro.py '$(find rrbot_description)/urdf/rrbot.xacro'" />
+	 command="$(find xacro)/xacro '$(find rrbot_description)/urdf/rrbot.xacro'" />
 
   <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
@@ -28,5 +28,5 @@
   <!-- ros_control rrbot launch file -->
   <include file="$(find rrbot_control)/launch/rrbot_control.launch" />
   <node pkg="turtlesim" type="turtle_teleop_key" name = "teleop"/>
-
+  <include file="$(find pendulum_control)/launch/pendulum.launch" />
 </launch>

@@ -247,7 +247,7 @@ namespace gazebo {
                    this->robot_namespace_.c_str(), joint_names_[side][i].c_str());
           gzthrow(error);
         }
-        joints_[side][i]->SetMaxForce(0, torque);
+        joints_[side][i]->SetParam("max_force", 0, torque);
       }
     }
 
